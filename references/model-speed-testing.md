@@ -1,3 +1,16 @@
+# 模型延迟基准测试 — 通用测试模式
+
+> 对应的 Hermes 评估模式：**跨 Provider 模型延迟对比**
+
+## 模式说明
+
+- 测试内容：测量每个模型的 TTFT（首 token 延迟）
+- 测试方法：Python + curl 循环，记录 wall-clock time
+- 数据用途：确定"哪个模型最快"，为 provider 选择和 fallback 排序提供依据
+- 适用场景：新 Provider 接入后，评估所有可用模型的响应速度
+
+---
+
 # Model Latency Speed Testing
 
 Reusable pattern for measuring per-model TTFT (time-to-first-token) across a provider's model list. Used to answer "which model is fastest?" or to benchmark a new endpoint.

@@ -1,3 +1,16 @@
+# Firecrawl MCP — MCP Server 集成示例
+
+> 对应的 Hermes 配置模式：**MCP Server 接入 + 工具注入**
+
+## 模式说明
+
+- MCP Server 接入：通过 `hermes mcp add` 连接外部工具服务
+- 工具注入：MCP 工具以 `firecrawl_*` 前缀自动成为 Hermes 原生工具
+- 凭证管理：API Key 通过 `.env` 注入，config.yaml 中引用 `${FIRECRAWL_API_KEY}`
+- 适用场景：需要扩展 Hermes 工具集（搜索、爬虫、监控、研究等）
+
+---
+
 # Firecrawl MCP Setup Reference
 
 Session-specific setup details for Firecrawl CLI + MCP integration with Hermes Agent.
