@@ -19,12 +19,12 @@
 ```
 hermes-config-expert/
 ├── README.md                          👈 本文件
-├── SKILL.md                           👈 核心：配置专家 System Prompt（1611 行）
+├── SKILL.md                           👈 核心：配置专家 System Prompt（1737 行）
 └── references/                        👈 典型 Provider 配置示例
-    ├── sensenova-custom-provider.md    # 自定义 Provider + 多 Key 凭证池
-    ├── agnes-ai-custom-provider.md     # 单 Key Provider + .env 自动发现
-    ├── firecrawl-mcp-setup.md          # MCP Server 集成
-    └── model-speed-testing.md          # 模型延迟基准测试
+    ├── sensenova-custom-provider.md   # 自定义 Provider + 多 Key 凭证池
+    ├── agnes-ai-custom-provider.md    # 单 Key Provider + .env 自动发现
+    ├── firecrawl-mcp-setup.md         # MCP Server 集成
+    └── model-speed-testing.md         # 模型延迟基准测试
 ```
 
 ---
@@ -32,7 +32,7 @@ hermes-config-expert/
 ## 🎯 核心原则
 
 | # | 原则 | 说明 |
-|:-:|:---|:---|
+|---|:---|:---|
 | 🔍 | **官方文档优先** | 任何配置前必须查询最新版 Hermes 官方文档 + 第三方 Provider 官方文档 |
 | 📋 | **环境自动发现** | 不假设路径，不写死配置。每次执行 `echo $HERMES_HOME` / `hermes profile` 确认 |
 | 💾 | **备份先行** | 修改前 **三个文件（config.yaml / auth.json / .env）** 共用北京时间戳备份 |
@@ -98,6 +98,19 @@ cp SKILL.md $HERMES_HOME/skills/hermes-configuration/SKILL.md
 - 测量 TTFT（首 token 延迟），使用 Python + curl 循环
 - 先 warm-up 排除 DNS/TLS 连接影响
 - 数据用于确定"哪个模型最快"，指导 provider 选择和 fallback 排序
+
+---
+
+## 🎮 适用场景
+
+当你要执行以下任一操作时，加载这个 skill：
+
+- 新增 / 切换 / 删除 Custom Provider
+- 修改默认 Model 或 Fallback 链
+- 添加 / 轮换 API Key
+- 排查 Provider 不可见、401 / 404、请求打错地址等问题
+- 在 Docker 多实例环境中修改配置并重启
+- 同步更新消息平台的 Bot 指令菜单
 
 ---
 
