@@ -1,16 +1,3 @@
-# Agnes AI — 单 Key 自定义 Provider 示例
-
-> 对应的 Hermes 配置模式：**单 Key 自定义 Provider + .env 自动发现**
-
-## 模式说明
-
-- Provider 类型：`custom_providers`（需手动编辑 config.yaml）
-- 凭证类型：**单 Key**，直接读取 `{NAME}_API_KEY` 环境变量
-- 无需 `hermes auth add`，无需 `credential_pool_strategies`
-- 适用场景：只有一个 API Key 的第三方 Provider，配置最简单
-
----
-
 # Agnes AI Custom Provider Reference
 
 Single-key custom provider for Agnes AI (Sapiens AI) via apihub.agnes-ai.com.

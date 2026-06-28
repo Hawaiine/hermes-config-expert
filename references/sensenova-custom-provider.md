@@ -1,16 +1,3 @@
-# Sensenova 自定义 Provider — 多 Key 凭证池示例
-
-> 对应的 Hermes 配置模式：**自定义 Provider + 凭证池 + 轮询策略**
-
-## 模式说明
-
-- Provider 类型：`custom_providers`（需手动编辑 config.yaml）
-- 凭证类型：**多 Key 凭证池**（multi-key credential pool），使用 `round_robin` 轮询策略
-- API Key 存储：auth.json 的 `custom:<name>` 下
-- 适用场景：同一 Provider 使用多个 API Key 分摊请求量和限流
-
----
-
 # Sensenova Custom Provider Reference
 
 Session-specific config details for the sensenova custom endpoint setup.
